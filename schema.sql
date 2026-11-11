@@ -1,0 +1,39 @@
+CREATE TABLE IF NOT EXISTS papers (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  arxiv_id VARCHAR(128) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  version INT NOT NULL,
+  title TEXT NOT NULL,
+  abstract MEDIUMTEXT NOT NULL,
+  authors JSON NOT NULL,
+  categories JSON NOT NULL,
+  published_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL,
+  source_url VARCHAR(512) NOT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_arxiv_id (arxiv_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS paper_jobs (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  paper_id BIGINT NOT NULL,
+  job_type VARCHAR(32) NOT NULL,
+  status VARCHAR(32) NOT NULL DEFAULT 'pending',
+  attempt_count INT NOT NULL DEFAULT 0,
+  last_error TEXT,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_paper_job (paper_id, job_type),
+  FOREIGN KEY (paper_id) REFERENCES papers(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS paper_files (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  paper_id BIGINT NOT NULL,
+  format VARCHAR(32) NOT NULL,
+  storage_path VARCHAR(512) NOT NULL,
+  source_url VARCHAR(512) NOT NULL,
+  sha256 CHAR(64) NOT NULL,
+  file_size BIGINT NOT NULL,
+  downloaded_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_paper_format (paper_id, format),
+  FOREIGN KEY (paper_id) REFERENCES papers(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
