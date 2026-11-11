@@ -1,0 +1,62 @@
+[
+  {
+    "paper_id": "arxiv:9901.00001",
+    "version": "v2",
+    "title": "[MOCK] Sparse Routing Adapters for Low-Resource Translation",
+    "authors": ["Mock Author A", "Mock Author B"],
+    "abstract": "We propose Sparse Routing Adapters (SRA), a parameter-efficient method for adapting multilingual translation models to low-resource language pairs. On WMT14 En-De and two low-resource pairs, SRA improves BLEU over LoRA while training 40% fewer parameters.",
+    "categories": ["cs.CL"],
+    "published_at": "2026-10-28",
+    "source_url": "https://arxiv.org/html/9901.00001v2",
+    "source_format": "html",
+    "fulltext_path": "fulltext/arxiv_9901.00001v2.html",
+    "fetched_at": "2026-11-10T09:00:00Z",
+    "status": "extracted",
+    "error": null
+  },
+  {
+    "paper_id": "arxiv:9901.00002",
+    "version": "v1",
+    "title": "[MOCK] A Position on Evaluation Practices for Code Generation Benchmarks",
+    "authors": ["Mock Author C"],
+    "abstract": "This position paper discusses how code generation benchmarks are constructed and reported.",
+    "categories": ["cs.LG", "cs.SE"],
+    "published_at": "2026-10-30",
+    "source_url": "https://arxiv.org/html/9901.00002v1",
+    "source_format": "html",
+    "fulltext_path": "fulltext/arxiv_9901.00002v1.html",
+    "fetched_at": "2026-11-10T09:00:05Z",
+    "status": "extracted",
+    "error": null
+  },
+  {
+    "paper_id": "arxiv:9901.00003",
+    "version": "v1",
+    "title": "[MOCK] Curriculum Sampling for Graph Contrastive Learning",
+    "authors": ["Mock Author D", "Mock Author E", "Mock Author F"],
+    "abstract": "We introduce a curriculum sampling strategy for graph contrastive learning. Our strategy improves node classification accuracy on Cora and PubMed.",
+    "categories": ["cs.LG"],
+    "published_at": "2026-11-02",
+    "source_url": "https://arxiv.org/html/9901.00003v1",
+    "source_format": "html",
+    "fulltext_path": "fulltext/arxiv_9901.00003v1.html",
+    "fetched_at": "2026-11-10T09:00:10Z",
+    "status": "parsed",
+    "error": null
+  },
+  {
+    "paper_id": "arxiv:9901.00004",
+    "version": "v1",
+    "title": "[MOCK] Scaling Laws for Retrieval-Augmented Agents",
+    "authors": ["Mock Author G"],
+    "abstract": "We study how the performance of retrieval-augmented agents scales with the size of the retrieval corpus.",
+    "categories": ["cs.CL", "cs.AI"],
+    "published_at": "2026-11-03",
+    "source_url": "https://arxiv.org/html/9901.00004v1",
+    "source_format": "html",
+    "fulltext_path": null,
+    "fetched_at": "2026-11-10T09:00:15Z",
+    "status": "failed",
+    "error": "HTML not available: LaTeXML conversion failed"
+  }
+]
