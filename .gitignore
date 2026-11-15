@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+data/
+.env
+.idea/
+
+# Machine-specific launchd configuration
+scripts/org.reading-verifier.arxiv-collection.plist
